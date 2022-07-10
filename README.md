@@ -1,7 +1,7 @@
 # RyoheiKomatsuyama
 
-<img align="left" width="45%" alt="🦑" src="/general.svg" />
-<img align="right" width="45%" alt="🦑" src="/achievements.svg">
+<img align="left" width="100%" alt="🦑" src="/general.svg" />
+<img align="right" width="100%" alt="🦑" src="/achievements.svg">
 
 <!-- <img width="100%" height="30" alt="🦑" src="/placeholder.svg"> -->
 <!-- [<img align="left" width="390" alt="🦑" src="/sponsors.svg">](https://github.com/sponsors/kmtym1998) -->
