@@ -6,6 +6,11 @@
       <img width="100%" alt="🦑" src="/general.svg" />
     </td>
     <td width="40%">
+<!--       <img
+        width="100%"
+        src="https://github-readme-stats.vercel.app/api/top-langs/?username=kmtym1998&count_private=true&show_icons=true&theme=vue"
+        alt="🦑"
+      /> -->
       <img
         width="100%"
         src="https://github-readme-stats.vercel.app/api?username=kmtym1998&count_private=true&show_icons=true&theme=vue"
