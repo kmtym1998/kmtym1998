@@ -6,21 +6,20 @@
 name: Metrics
 on:
   # 🌏 Think about the planet! No need to update stats too frequently
-  schedule: [{cron: "0 16 * * *"}]
+  schedule: [{ cron: '0 16 * * *' }]
   # 💡 The following line lets you run workflow manually from the action tab!
   workflow_dispatch:
 jobs:
-  metrics:
+  medias:
     runs-on: ubuntu-latest
     steps:
-
       - name: 🦑 Medias
         if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
         with:
           filename: medias.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
+          base: ''
           config_order: anilist, music
           plugin_anilist: yes
           plugin_anilist_medias: anime
@@ -31,27 +30,23 @@ jobs:
           plugin_music_playlist: ${{ secrets.PLAYLIST }}
           plugin_music_limit: 9
 
+  achievements:
+    runs-on: ubuntu-latest
+    steps:
       - name: 🦑 Achievements
         if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
         with:
           filename: achievements.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
+          base: ''
           plugin_achievements: yes
           plugin_achievements_display: compact
           plugin_fortune: yes
 
-      - name: 🦑 Sponsors
-        if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@latest
-        with:
-          filename: sponsors.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_sponsors: yes
-          plugin_sponsors_past: yes
-
+  general:
+    runs-on: ubuntu-latest
+    steps:
       - name: 🦑 General
         if: ${{ success() || failure() }}
         uses: lowlighter/metrics@latest
@@ -74,31 +69,40 @@ jobs:
           plugin_notable: yes
           plugin_discussions: yes
 
+  comment-reactions:
+    runs-on: ubuntu-latest
+    steps:
       - name: 🦑 Comment reactions
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.reactions.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
+          base: ''
           plugin_reactions: yes
           plugin_reactions_limit: 100
           plugin_reactions_details: percentage
-        
+
+  featured-repositories:
+    runs-on: ubuntu-latest
+    steps:
       - name: 🦑 Featured repositories
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.repositories.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
+          base: ''
           plugin_repositories: yes
           plugin_repositories_featured: kmtym1998/hasuraenv
 
+  contributions:
+    runs-on: ubuntu-latest
+    steps:
       - name: 🦑 Contributions
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.plugin.notable.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
+          base: ''
           plugin_notable: yes
           plugin_notable_types: commit,pull_request,issue
           plugin_notable_from: all
