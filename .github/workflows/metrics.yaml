@@ -83,3 +83,22 @@ jobs:
           plugin_reactions: yes
           plugin_reactions_limit: 100
           plugin_reactions_details: percentage
+        
+      - name: 🦑 Featured repositories
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.repositories.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_repositories: yes
+          plugin_repositories_featured: kmtym1998/hasuraenv
+
+      - name: 🦑 Contributions
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.notable.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_notable: yes
+          plugin_notable_types: commit,pull_request,issue
+          plugin_notable_from: all
