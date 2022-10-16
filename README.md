@@ -2,19 +2,21 @@
 
 <table width="100%" border=0 frame="void">
   <tr valign="top">
-    <td width="50%">
-      <img alt="🦑" src="/general.svg" />
+    <td width="60%">
+      <img width="100%" alt="🦑" src="/general.svg" />
     </td>
-    <td width="50%">
+    <td width="40%">
       <img
-        src="https://github-readme-stats.vercel.app/api?username=kmtym1998&count_private=true&show_icons=true&theme=vue"
-        alt="🦑"
-      />
-      <img
+        width="100%"
         src="https://github-readme-stats.vercel.app/api/top-langs/?username=kmtym1998&count_private=true&show_icons=true&theme=vue"
         alt="🦑"
       />
-      <img alt="🦑" src="/achievements.svg" />
+      <img
+        width="100%"
+        src="https://github-readme-stats.vercel.app/api?username=kmtym1998&count_private=true&show_icons=true&theme=vue"
+        alt="🦑"
+      />
+      <img alt="🦑" src="/achievements.svg" width="100%" />
     </td>
   </tr>
 </table>
